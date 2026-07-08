@@ -371,19 +371,30 @@ header.scrolled .burger{color:var(--navy-deep);}
 }
 .brand-card:hover{transform:translateY(-8px);box-shadow:var(--shadow);}
 .brand-top{
-  height:150px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;
+  aspect-ratio:3/2;
+  position:relative;overflow:hidden;
   background:#f8fafc;
 }
-.brand-top::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 20%, rgba(42,157,143,.06), transparent 60%);}
-.brand-logo-img{
-  max-width:120px;max-height:90px;width:auto;height:auto;object-fit:contain;position:relative;z-index:1;
+.brand-top::after{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 30% 20%, rgba(42,157,143,.06), transparent 60%);
+  pointer-events:none;z-index:1;
 }
-.brand-body{padding:26px;}
-.brand-industry{font-size:12px;color:var(--teal);font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;}
-.brand-body h4{font-size:19px;margin-bottom:10px;}
-.brand-services{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
+.brand-logo-img{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  object-fit:contain;
+  object-position:center;
+  display:block;
+  padding:16px;
+  box-sizing:border-box;
+}
+.brand-body{padding:20px 22px 24px;}
+.brand-industry{font-size:12px;color:var(--teal);font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;}
+.brand-body h4{font-size:17px;margin-bottom:8px;}
+.brand-services{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px;}
 .brand-services span{
-  font-size:12px;background:var(--off-white);color:#3d5568;padding:6px 12px;border-radius:100px;font-weight:600;
+  font-size:11.5px;background:var(--off-white);color:#3d5568;padding:5px 11px;border-radius:100px;font-weight:600;
 }
 .case-link{
   font-size:14px;font-weight:700;color:var(--navy);display:inline-flex;align-items:center;gap:8px;
@@ -796,7 +807,7 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.6);padding:60px 0 30p
     </div>
     <div class="brand-grid reveal-stagger" id="brandGrid">
       <div class="brand-card reveal" style="--i:0" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="0">
-        <div class="brand-top"><img class="brand-logo-img" src="assets/clients/chaina mart.jpg" alt="Chaina Mart"></div>
+        <div class="brand-top"><img class="brand-logo-img" src="assets/clients/China mart.jpeg" alt="Chaina Mart"></div>
         <div class="brand-body">
           <div class="brand-industry">Retail</div>
           <h4>Chaina Mart</h4>
@@ -805,7 +816,7 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.6);padding:60px 0 30p
         </div>
       </div>
       <div class="brand-card reveal" style="--i:1" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="100">
-        <div class="brand-top"><img class="brand-logo-img" src="assets/clients/hm supermarket.jpeg" alt="HM Supermarket"></div>
+        <div class="brand-top"><img class="brand-logo-img" src="assets/clients/hm supermarkrt.jpeg" alt="HM Supermarket"></div>
         <div class="brand-body">
           <div class="brand-industry">Retail</div>
           <h4>HM Supermarket</h4>
@@ -814,7 +825,7 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.6);padding:60px 0 30p
         </div>
       </div>
       <div class="brand-card reveal" style="--i:2" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="200">
-        <div class="brand-top"><img class="brand-logo-img" src="assets/clients/kampalafair_logo.png" alt="Kampala Fair"></div>
+        <div class="brand-top"><img class="brand-logo-img" src="assets/clients/kampala fair.jpeg" alt="Kampala Fair"></div>
         <div class="brand-body">
           <div class="brand-industry">Fashion &amp; African Design</div>
           <h4>Kampala Fair</h4>
@@ -823,7 +834,7 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.6);padding:60px 0 30p
         </div>
       </div>
       <div class="brand-card reveal" style="--i:3" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300">
-        <div class="brand-top"><img class="brand-logo-img" src="assets/clients/uganics.jfif" alt="Uganics Limited"></div>
+        <div class="brand-top"><img class="brand-logo-img" src="assets/clients/uganics.jpeg" alt="Uganics Limited"></div>
         <div class="brand-body">
           <div class="brand-industry">Social Enterprise / Health</div>
           <h4>Uganics Limited</h4>
@@ -832,7 +843,7 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.6);padding:60px 0 30p
         </div>
       </div>
       <div class="brand-card reveal" style="--i:4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="400">
-        <div class="brand-top"><img class="brand-logo-img" src="assets/clients/mtc hosipital.jpg" alt="MTC Hospital"></div>
+        <div class="brand-top"><img class="brand-logo-img" src="assets/clients/nalujja medical center.jpeg" alt="MTC Hospital"></div>
         <div class="brand-body">
           <div class="brand-industry">Healthcare</div>
           <h4>MTC Hospital</h4>
@@ -841,7 +852,7 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.6);padding:60px 0 30p
         </div>
       </div>
       <div class="brand-card reveal" style="--i:5" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="500">
-        <div class="brand-top"><img class="brand-logo-img" src="assets/clients/man in me.jpeg" alt="Man In Me"></div>
+        <div class="brand-top"><img class="brand-logo-img" src="assets/clients/the man in me.jpeg" alt="Man In Me"></div>
         <div class="brand-body">
           <div class="brand-industry">Personal Brand</div>
           <h4>Man In Me</h4>
@@ -1125,11 +1136,10 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.6);padding:60px 0 30p
         </div>
 
         <div class="social-row">
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com/xpoimaging?igsh=MTRqNDBsbmFqNG56aw==" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://vt.tiktok.com/ZSCwcbA61/" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://www.linkedin.com/company/xpo-imaging/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://x.com/xpoimaging?s=21" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
       </div>
 
@@ -1158,13 +1168,13 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.6);padding:60px 0 30p
   </div>
 </section>
 
-<a href="https://wa.me/0782046399" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<a href="https://wa.me/256708204639" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
 
 <footer>
   <div class="container">
     <div class="footer-top">
       <div>
-        <div class="footer-logo"><img src="assets/xpologo.jpg" alt="XPO Imaging" style="height:60px;width:auto;border-radius:10px;object-fit:contain;"></div>
+        <div class="footer-logo"><img src="assets/logo.png" alt="XPO Imaging" style="height:60px;width:auto;border-radius:10px;object-fit:contain;"></div>
         <p class="footer-tag">A full-service creative communications, marketing, branding &amp; media production agency, established in Uganda since 2014.</p>
       </div>
       <div class="footer-links">
@@ -1187,10 +1197,10 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.6);padding:60px 0 30p
     <div class="footer-bottom">
       <span>© <span id="year"></span> XPO Imaging. All rights reserved.</span>
       <div class="footer-social">
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/xpoimaging?igsh=MTRqNDBsbmFqNG56aw==" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://vt.tiktok.com/ZSCwcbA61/" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://www.linkedin.com/company/xpo-imaging/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://x.com/xpoimaging?s=21" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
       </div>
     </div>
   </div>
